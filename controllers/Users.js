@@ -58,7 +58,7 @@ const updateUsers = (req, res) => {
 
 const deleteUsers = (req, res) => {
     Todo.deleteOne({ _id: req.params.userID })
-      .then(() => res.json({ message: "User Deletedd" }))
+      .then(() => res.json({ message: "User Deletedddd" }))
       .catch((err) => res.send(err));
 
   };
