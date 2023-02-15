@@ -1,4 +1,4 @@
-const Users = require("../Model/Users");
+const Users = require("../models/Users");
 
 const getUsers = (req, res) => {
     Users.find((err, users) => {
@@ -58,7 +58,7 @@ const updateUsers = (req, res) => {
 
 const deleteUsers = (req, res) => {
     Todo.deleteOne({ _id: req.params.userID })
-      .then(() => res.json({ message: "User Deletedddd3333" }))
+      .then(() => res.json({ message: "User Deleted" }))
       .catch((err) => res.send(err));
 
   };
