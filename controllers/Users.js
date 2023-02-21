@@ -9,13 +9,6 @@ const getUsers = (req, res) => {
     });
 };
 
-module.exports = {
-    getUsers,
-    createUsers,
-    updateUsers,
-    deleteUsers
-};
-
 const createUsers = (req, res) => {
     const users = new Users({
       id: req.body.id,
@@ -62,3 +55,11 @@ const deleteUsers = (req, res) => {
       .catch((err) => res.send(err));
 
   };
+
+
+  module.exports = {
+    getUsers,
+    createUsers,
+    updateUsers,
+    deleteUsers
+};

@@ -1,4 +1,4 @@
-const ProductUser = require("../Model/ProductUser");
+const ProductUser = require("../models/ProductUser");
 
 const getProductUser = (req, res) => {
   Products.find((err, productUser) => {
@@ -7,13 +7,6 @@ const getProductUser = (req, res) => {
         }
         res.json(productUser);
     });
-};
-
-module.exports = {
-    getProductUser,
-    createProductUser,
-    updateProductUser,
-    deleteProductUser
 };
 
 const createProductUser = (req, res) => {
@@ -63,3 +56,10 @@ const deleteProductUser = (req, res) => {
       .then(() => res.json({ message: "ProductUser Deleted" }))
       .catch((err) => res.send(err));
   };
+
+module.exports = {
+    getProductUser,
+    createProductUser,
+    updateProductUser,
+    deleteProductUser
+};

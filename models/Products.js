@@ -1,8 +1,9 @@
+const { Decimal128 } = require("bson");
 const mongoose = require("mongoose");
 
 const ProductsSchema = new mongoose.Schema({
   id: {
-    type: int,
+    type: Number,
     required: true
   },
   name: {
@@ -10,11 +11,11 @@ const ProductsSchema = new mongoose.Schema({
     required: true
   },
   price: {
-    type: double,
+    type: Decimal128,
     required: true
   },
   qualification: {
-    type: int,
+    type: Number,
     required: true
   },
   url: {

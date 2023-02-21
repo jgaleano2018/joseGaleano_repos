@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const ProductUserSchema = new mongoose.Schema({
   userId: {
-    type: int,
+    type: Number,
     required: true
   },
   productId: {
-    type: int,
+    type: Number,
     required: true
   },
   createdDate: {
@@ -18,14 +18,5 @@ const ProductUserSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-
-userId
-1
-productId
-1
-createDate
-"2023-02-14T06:44:00Z"
-lastUpdate
-"2023-02-13T06:44:00Z"
 
 module.exports = mongoose.model("ProductUser", ProductUserSchema);

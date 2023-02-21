@@ -1,6 +1,6 @@
-const { getProducts } = require("./controllers/Products");
-const { getProductUser } = require("./controllers/ProductUser");
-const { getUsers, createUsers } = require("./controllers/Users");
+const { getProducts, createProducts, updateProducts } = require("./controllers/Products");
+const { getProductUser, createProductUser, updateProductUser } = require("./controllers/ProductUser");
+const { getUsers, createUsers, updateUsers } = require("./controllers/Users");
 
 const router = require("express").Router();
 

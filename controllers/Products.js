@@ -1,4 +1,4 @@
-const Products = require("../Model/Products");
+const Products = require("../models/Products");
 
 const getProducts = (req, res) => {
   Products.find((err, products) => {
@@ -7,13 +7,6 @@ const getProducts = (req, res) => {
         }
         res.json(products);
     });
-};
-
-module.exports = {
-    getProducts,
-    createProducts,
-    updateProducts,
-    deleteProducts
 };
 
 const createProducts = (req, res) => {
@@ -63,3 +56,11 @@ const deleteProducts = (req, res) => {
       .then(() => res.json({ message: "Product Deleted" }))
       .catch((err) => res.send(err));
   };
+
+
+  module.exports = {
+    getProducts,
+    createProducts,
+    updateProducts,
+    deleteProducts
+};
